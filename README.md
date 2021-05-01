@@ -1,1 +1,1 @@
-[DEMO LINK](https://KirillLutsenko.github.io/List-of-characters/)
+[Demo](https://KirillLutsenko.github.io/List-of-characters/)
