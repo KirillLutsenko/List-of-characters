@@ -1,1 +1,111 @@
-/* go styles here */
+body {
+  background-color: #00c4a7;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #00c4a7;
+
+  &__title {
+    text-align: center;
+    color: #fff;
+
+    @media screen and (max-width: 600px) {
+      font-size: 22px;
+    }
+
+    @media screen and (max-width: 400px) {
+      margin-top: 0;
+    }
+  }
+
+  &__main-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 70vw;
+
+    @media screen and (max-width: 1300px) {
+      justify-content: space-around;
+      width: 100vw;
+    }
+
+    @media screen and (max-width: 1100px) {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 400px) {
+      margin: 10px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .app {
+    &__main-block {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,.2), 0 -1px rgba(0,0,0,.8);
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  background: rgb(28,107,114) radial-gradient(150% 100% at 50% 5px, rgba(255,255,255,.2), rgba(0,0,0,0));
+  box-shadow: inset rgba(0,0,0,.6) 0 -2px 5px, inset rgba(252,255,255,.7) 0 2px 5px, rgba(0,0,0,.8) 0 2px 5px -1px;
+  color: rgb(0,79,86);
+  user-select: none;
+
+  &:hover {
+    color: rgb(0,59,66);
+    cursor: pointer;
+  }
+
+  &:active {
+    box-shadow:
+     inset rgba(0,0,0,1) 0 1px 3px,
+     inset rgba(0,0,0,.6) 0 -2px 5px,
+     inset rgba(252,255,255,.7) 0 2px 5px,
+     0 1px rgba(255,255,255,.08);
+    color: rgb(128,207,214);
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+}
+
+.button--active {
+  background-color: rgb(128,207,214);
+}
+
+.button--disabled {
+  opacity: 0.6;
+
+  &:hover {
+    color: rgb(0,79,86);
+    cursor: auto;
+  }
+}

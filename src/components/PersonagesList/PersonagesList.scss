@@ -1,0 +1,152 @@
+.personages {
+  background: #f5ffff;
+  border-collapse: collapse;
+  text-align: left;
+  width: 500px;
+
+  &__header-item {
+    border-top: 1px solid #777777;	
+    border-bottom: 1px solid #777777; 
+    text-align: center;
+    box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+    background: linear-gradient(rgb(0,79,86), rgb(128,207,214));
+    color: white;
+    padding: 10px 15px;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 25%;
+      height: 25%;
+      width: 100%;
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+    }
+
+    &:first-child {
+      border-left: 1px solid #777777;	
+      border-bottom:  1px solid #777777;
+      box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+    }
+
+    &:last-child {
+      border-right: 1px solid #777777;
+      border-bottom:  1px solid #777777;
+      box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 11px;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 8px;
+    }
+  }
+
+  &__table-row {
+    &:nth-child(odd) {
+      background: #ebf3f9;
+    }
+  }
+
+  &__table-item {
+    padding: 5px 25px;
+    text-align: center;
+    border: 1px solid #e3eef7;
+    position: relative;
+    transition: all 0.5s ease;
+
+    @media screen and (max-width: 600px) {
+      padding: 5px 10px;
+      font-size: 10px;
+    }
+
+    @media screen and (max-width: 400px) {
+      padding: 3px 5px;
+      font-size: 8px;
+    }
+  }
+  
+  &__button {
+    padding: 5px 20px;
+  }
+
+  &__empty {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin: -25px auto 0;
+    border-radius: 50%;
+    background: #ffffff;
+    background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 50%);
+    position: relative;
+    -webkit-animation: loader 1.5s infinite linear;
+    animation: loader 1.5s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+
+    &:before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      border-radius: 100% 0 0 0;
+    }
+
+    &:after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #00c4a7;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    @-webkit-keyframes loader {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes loader {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 300px;
+  }
+}

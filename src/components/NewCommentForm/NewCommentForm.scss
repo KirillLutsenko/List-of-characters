@@ -1,0 +1,38 @@
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  &__input {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: none;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 600px) {
+      justify-content: space-around;
+    }
+  }
+
+  &__submit-button {
+    padding: 5px 0;
+    width: 140px;
+
+    @media screen and (max-width: 600px) {
+      width: 120px;
+    }
+  }
+
+  &__close-button {
+    padding: 5px 0;
+    width: 140px;
+
+    @media screen and (max-width: 600px) {
+      width: 120px;
+    }
+  }
+}
